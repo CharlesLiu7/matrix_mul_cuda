@@ -64,5 +64,5 @@
 ###############################################################################
 # set language lingulist
 ###############################################################################
-*.cu linguist-language=CUDA
-*.cpp linguist-language=C++
+*.cu linguist-language=Cuda
+*.cpp linguist-language=Cuda
