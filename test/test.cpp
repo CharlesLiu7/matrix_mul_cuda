@@ -134,13 +134,13 @@ int main()
 		N    // ldc
 		);
 
+	// 同步函数
+	cudaThreadSynchronize();
+
 	// 输出时间
 	QueryPerformanceCounter(&lv2);
 	time = (secondsPerTick * (lv2.QuadPart - lv1.QuadPart));
 	cout << endl << "Done! cublas Sgemm Time used " << setprecision(2) << time / 1000.0 << "ms" << endl << endl;
-
-	// 同步函数
-	cudaThreadSynchronize();
 
 	// 从 显存 中取出运算结果至 内存中去
 	cublasGetVector(
